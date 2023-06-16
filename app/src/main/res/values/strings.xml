@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">YandexProject</string>
+    <string name="title">Мои дела</string>
+    <string name="value_tasks_done">Выполнено - </string>
+    <string name="text_hint">Что б такого написать...</string>
+    <string name="save">СОХРАНИТЬ</string>
+    <string name="date">Сделать до</string>
+    <string-array name="importance">
+        <item>Нет</item>
+        <item>Низкий</item>
+        <item>Высокий</item>
+    </string-array>
+</resources>
