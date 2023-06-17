@@ -49,31 +49,43 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/close_button"/>
 
-    <Spinner
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
         android:id="@+id/task_importance"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
-        android:entries="@array/importance"
-        android:textSize="30sp"
+        android:hint="Важность"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/task_edit_text" >
-    </Spinner>
+        app:layout_constraintTop_toBottomOf="@+id/task_edit_text">
 
-    <Switch
-        android:id="@+id/calendar_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginStart="28dp"
-        android:text="@string/date"
-        android:textSize="18sp"
-        android:fontFamily="sans-serif"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/task_importance"
-        android:onClick="showDatePicker"/>
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:text="Нет"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <Switch
+            android:id="@+id/calendar_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="28dp"
+            android:text="@string/date"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/task_importance"
+            android:onClick="showDatePicker"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>

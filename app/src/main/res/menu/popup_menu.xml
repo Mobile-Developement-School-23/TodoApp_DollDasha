@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/importance_1"
+        android:title="Нет" />
+    <item
+        android:id="@+id/importance_2"
+        android:title="Низкий" />
+    <item
+        android:id="@+id/importance_3"
+        android:title="Высокий" />
+</menu>

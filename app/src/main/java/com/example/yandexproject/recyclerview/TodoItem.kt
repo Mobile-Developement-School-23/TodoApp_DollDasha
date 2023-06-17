@@ -1,13 +1,20 @@
 package com.example.yandexproject.recyclerview
 
 import android.graphics.drawable.Drawable
+import java.util.Date
 
 data class TodoItem(
-    val taskId: Int,
+    val taskId: String,
     val taskText: String,
-//    val taskImportance: Int,
+    val importance: Importance,
     val taskDone: Boolean,
-//    val dateDeadline: Int?,
-//    val dateCreation: Int,
-//    val dateChanging: Int?
-)
+    val deadline: Date?,
+    val createdAt: Date,
+    val modifiedAt: Date?,
+) {
+    enum class Importance {
+        LOW,
+        COMMON,
+        HIGH,
+    }
+}
